@@ -1,0 +1,440 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday My Love 💗</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Trebuchet MS', sans-serif;
+    background: linear-gradient(135deg, #ffb6d9, #ffe1ed, #ffc1dc);
+    color: #d63384;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    padding: 35px 15px;
+    color: white;
+    text-shadow: 2px 3px 5px #d63384;
+}
+
+header h1 {
+    font-size: 32px;
+}
+
+header p {
+    margin-top: 10px;
+}
+
+.container {
+    background: rgba(255,255,255,0.85);
+    margin: 20px 15px;
+    padding: 25px 18px;
+    border-radius: 25px;
+    box-shadow: 0 5px 20px #d6338440;
+}
+
+h2 {
+    margin-bottom: 18px;
+}
+
+button {
+    border: none;
+    background: #ff69a9;
+    color: white;
+    padding: 13px 23px;
+    border-radius: 30px;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px #d6338440;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* PEMBUKA */
+
+#opening {
+    min-height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.opening-box {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 25px;
+    width: 100%;
+    box-shadow: 0 5px 25px #d6338440;
+}
+
+.gift {
+    font-size: 100px;
+    cursor: pointer;
+    animation: goyang 1.5s infinite;
+}
+
+@keyframes goyang {
+    0%,100% { transform: rotate(0); }
+    25% { transform: rotate(-10deg); }
+    75% { transform: rotate(10deg); }
+}
+
+/* FOTO */
+
+.album {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.album img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 18px;
+    border: 4px solid white;
+    box-shadow: 0 3px 10px #d6338430;
+}
+
+/* SURAT */
+
+.letter {
+    background: #fff0f6;
+    padding: 20px;
+    border-radius: 18px;
+    line-height: 1.8;
+    display: none;
+    margin-top: 15px;
+}
+
+/* ANIMASI */
+
+.falling {
+    position: fixed;
+    top: -30px;
+    z-index: 10;
+    pointer-events: none;
+    animation: jatuh linear forwards;
+}
+
+@keyframes jatuh {
+    to {
+        transform: translateY(110vh) rotate(720deg);
+    }
+}
+
+.balloon {
+    display: inline-block;
+    font-size: 45px;
+    animation: terbang 3s ease-in-out infinite alternate;
+}
+
+@keyframes terbang {
+    from { transform: translateY(10px); }
+    to { transform: translateY(-20px); }
+}
+
+footer {
+    padding: 35px;
+    color: white;
+    text-shadow: 1px 2px 4px #d63384;
+}
+
+#main {
+    display: none;
+}
+
+#musicButton {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    z-index: 20;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    padding: 0;
+    font-size: 22px;
+    box-shadow: 0 3px 12px #d6338460;
+}
+</style>
+</head>
+
+<body>
+
+<!-- MUSIK -->
+<audio id="music" loop>
+    <source src="musik.mp3" type="audio/mpeg">
+</audio>
+
+<!-- HALAMAN PEMBUKA -->
+
+<section id="opening">
+    <div class="opening-box">
+
+        <h2>💗 A Special Day 💗</h2>
+
+        <p>Ada hadiah spesial buat kamu...</p>
+
+        <div class="gift" onclick="openGift()">
+            🎁
+        </div>
+
+        <p>Sentuh hadiah di atas ya! 🥺</p>
+
+        <button onclick="openGift()">
+            Buka Hadiah 💝
+        </button>
+
+    </div>
+</section>
+
+<!-- HALAMAN UTAMA -->
+
+<div id="main">
+
+<header>
+    <h1>🎂 HAPPY BIRTHDAY 🎂</h1>
+    <p>To Someone Special In My Life 💗</p>
+</header>
+
+<div class="container">
+
+    <div class="balloon">🎈 🎈 🎈</div>
+
+    <h2>Happy Birthday Sayang! 💕</h2>
+
+    <p>
+        Hari ini adalah hari yang sangat spesial,
+        karena seseorang yang luar biasa sedang
+        merayakan hari lahirnya.
+    </p>
+
+    <p style="margin-top:15px">
+        Semoga semua impianmu menjadi kenyataan.
+        Jangan pernah berhenti tersenyum ya! ❤️
+    </p>
+
+</div>
+
+<!-- ALBUM FOTO -->
+
+<div class="container">
+
+    <h2>📸 Our Memories</h2>
+
+    <p style="margin-bottom:15px">
+        Beberapa kenangan indah bersama kamu.
+    </p>
+
+    <div class="album">
+
+        <img src="https://i.imgur.com/HjhBSFD.jpeg" alt="Kenangan 1">
+
+        <img src="https://i.imgur.com/vfIn0BF.jpeg" alt="Kenangan 2">
+
+        <img src="https://i.imgur.com/Xc3e1Pg.jpeg" alt="Kenangan 3">
+
+        <img src="https://i.imgur.com/r3IlzB4.jpeg" alt="Kenangan 4">
+
+    </div>
+
+    <p style="margin-top:15px">
+        Every moment with you is beautiful 💗
+    </p>
+
+</div>
+
+<!-- SURAT CINTA -->
+
+<div class="container">
+
+    <h2>💌 A Letter For You</h2>
+
+    <p>Ada sesuatu yang ingin aku sampaikan...</p>
+
+    <button onclick="openLetter()">
+        Buka Surat ❤️
+    </button>
+
+    <div class="letter" id="letter">
+
+        <h2>Dear My Love 💗</h2>
+
+        Selamat ulang tahun sayangku.
+
+        Terima kasih karena sudah hadir
+        dalam hidupku.
+
+        Aku berharap kamu selalu diberikan
+        kebahagiaan, kesehatan, dan
+        semua hal baik di dunia ini.
+
+        Jangan pernah merasa sendirian,
+        karena kamu sangat berarti.
+
+        Semoga kita bisa membuat lebih
+        banyak kenangan indah bersama.
+
+        <br><br>
+
+        I LOVE YOU SO MUCH! ❤️
+
+        <br><br>
+
+        With Love 💕
+
+    </div>
+
+</div>
+
+<!-- HARAPAN -->
+
+<div class="container">
+
+    <h2>🌷 My Wishes For You</h2>
+
+    <p>💗 Selalu bahagia</p>
+    <p>🌸 Selalu sehat</p>
+    <p>✨ Semua impian tercapai</p>
+    <p>💕 Dikelilingi orang-orang baik</p>
+    <p>🎂 Panjang umur</p>
+
+</div>
+
+<footer>
+    <h2>Made With Love ❤️</h2>
+    <p>Once Again, Happy Birthday! 🎂</p>
+    <p>💗💕💗</p>
+</footer>
+
+</div>
+
+<!-- TOMBOL MUSIK -->
+
+<button id="musicButton" onclick="toggleMusic()">
+    🎵
+</button>
+
+<script>
+
+const music = document.getElementById("music");
+
+let opened = false;
+
+// BUKA HADIAH
+
+function openGift() {
+
+    if (opened) return;
+
+    opened = true;
+
+    document.getElementById("opening").style.display = "none";
+
+    document.getElementById("main").style.display = "block";
+
+    music.play().then(() => {
+        document.getElementById("musicButton").innerHTML = "⏸️";
+    }).catch(() => {
+        document.getElementById("musicButton").innerHTML = "🎵";
+    });
+
+    window.scrollTo(0, 0);
+
+}
+
+// MUSIK
+
+function toggleMusic() {
+
+    if (music.paused) {
+
+        music.play().then(() => {
+            document.getElementById("musicButton").innerHTML = "⏸️";
+        }).catch(() => {
+            alert("Musik belum bisa diputar. Periksa file musik.mp3");
+        });
+
+    } else {
+
+        music.pause();
+
+        document.getElementById("musicButton").innerHTML = "🎵";
+
+    }
+
+}
+
+// SURAT
+
+function openLetter() {
+
+    const letter = document.getElementById("letter");
+
+    if (letter.style.display === "block") {
+
+        letter.style.display = "none";
+
+    } else {
+
+        letter.style.display = "block";
+
+    }
+
+}
+
+// ANIMASI HATI
+
+function createHeart() {
+
+    const heart = document.createElement("div");
+
+    heart.className = "falling";
+
+    const emojis = ["💗", "💕", "💖", "🌸", "❤️"];
+
+    heart.innerHTML = emojis[
+        Math.floor(Math.random() * emojis.length)
+    ];
+
+    heart.style.left = Math.random() * 100 + "vw";
+
+    heart.style.fontSize =
+        (15 + Math.random() * 25) + "px";
+
+    heart.style.animationDuration =
+        (3 + Math.random() * 4) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 7000);
+
+}
+
+setInterval(createHeart, 500);
+
+</script>
+
+</body>
+</html>
